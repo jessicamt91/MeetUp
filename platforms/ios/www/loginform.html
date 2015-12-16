@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+       
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+           <script src="http://192.168.0.106:8080/target/target-script-min.js#anonymous"></script>
+    </head>
+    <body>
+        <div class="header">
+            <ul class="nav nav-pills">
+                <li>
+                    <a href="index.html">
+                        <span class="fa fa-home"></span> Home
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                         <span class="fa fa-info"></span> About
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="text-center">
+                <img src="img/logo.png" />
+            </div>
+            <div class="col-xs-12">
+                <h1>MeetP!</h1>
+                <h4>where people meet</h4>
+            </div>
+            <div class="row text-center" >
+                <div class="col-xs-12"></div>
+                <div class="row text-center">
+                    <div class="error" style="display:none"></div>
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-4">
+                            <input type="text" class="form-control" id="login-username" placeholder="Username" />
+                    </div>
+                    <div class="col-xs-4">
+                            <input type="password" class="form-control" id="login-password" placeholder="Password" />
+                    </div>
+                </div>
+                <br/>
+                <button type="button" class="btn btn-info login-btn" id="authorize-button-email">Sign in with Email</button>
+               
+                <button type="button" class="btn btn-info login-btn" id="authorize-button-google">Sign in with Google</button>
+                <div id="btn1">
+                    <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="checkLoginState()">Sign in with Facebook</div>
+                </div>
+            </div>
+
+        </div>
+    
+        <!-- existing scripts -->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/parse-1.1.2.min.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <!-- <script type="text/javascript" src="js/uber.js"></script> -->
+        <!-- <script type="text/javascript" src="js/cordova.js"></script> -->
+
+        <!-- meetup scripts --> 
+        <script type="text/javascript" src="js/index.js"></script>    <!-- Google oAuth 2.0 -->
+        <script src="https://apis.google.com/js/client.js"></script>
+        <script type="text/javascript" src="js/oAuth2.js"></script>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+       
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+     <!--     <script src="http://192.168.0.106:8080/target/target-script-min.js#anonymous"></script> -->
+    </head>
+    <body>
+        <div class="header">
+            <ul class="nav nav-pills">
+                <li>
+                    <a href="index.html">
+                        <span class="fa fa-home"></span> Home
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                         <span class="fa fa-info"></span> About
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="text-center">
+                <img src="img/logo.png" />
+            </div>
+
+            <div class="col-xs-12">
+                <h1>MeetP!</h1>
+                <h4>where people meet</h4>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row text-center">
+                        <div class="error" style="display:none"></div>
+                        <div class="col-xs-6">
+                            <div class="input-group input-group-md">
+                                <input type="text" class="form-control" id="signup-username" placeholder="Username" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="input-group input-group-md">
+                                <input type="password" class="form-control" id="signup-password" placeholder="Password" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center" style="padding-top:10px">
+                        <div class="col-xs-6">
+                            <div class="input-group input-group-md">
+                                <input type="text" class="form-control" id="signup-phonenumber" placeholder="Phone Number" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <button class="signup btn btn-warning top-margin-1">Sign Up</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <!-- existing scripts -->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/parse-1.1.2.min.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+         <script type="text/javascript" src="js/cordova.js"></script> 
+
+        <!-- meetup scripts --> 
+        <script type="text/javascript" src="js/index.js"></script>    <!-- Google oAuth 2.0 -->
+        <script src="https://apis.google.com/js/client.js"></script>
+        <script type="text/javascript" src="js/oAuth2.js"></script>
+    </body>
+</html>
