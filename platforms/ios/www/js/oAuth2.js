@@ -1,5 +1,9 @@
 
-/* Google oAuth 2.0 */
+/**-----------------------
+ GOOGLE 
+-----------------------**/
+
+/** oAuth 2.0 */
 var clientId = '944946221486-bmlofkt5gr4g8lforf0qgum5p5tfbqmk.apps.googleusercontent.com';
 var apiKey = 'AIzaSyDhedFAo-i5NxuggaKMXe_6rY-jUPL33YE';
 var scopes = 'https://www.googleapis.com/auth/gmail.readonly';
@@ -39,6 +43,9 @@ IF YES, THEN TRY :) */
   } */
 }
 
+/**-----------------------
+ FACEBOOK 
+-----------------------**/
 /*oAuth 2*/
 $('#authorize-button-google').on('click',function(){
  handleClientLoad();
