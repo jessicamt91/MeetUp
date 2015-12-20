@@ -1,4 +1,4 @@
-/*
+cordova.define("cordova-plugin-file.resolveLocalFileSystemURI", function(require, exports, module) { /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -85,3 +85,5 @@ module.exports.resolveLocalFileSystemURI = function() {
     console.log("resolveLocalFileSystemURI is deprecated. Please call resolveLocalFileSystemURL instead.");
     module.exports.resolveLocalFileSystemURL.apply(this, arguments);
 };
+
+});

@@ -14,6 +14,23 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <feature name="Sms">
+        <param name="ios-package" value="Sms" />
+    </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <feature name="File">
+        <param name="ios-package" value="CDVFile" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Cache">
+        <param name="ios-package" value="Cache" />
+    </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <name>MeetP</name>
@@ -97,21 +114,4 @@
             <string>UIInterfaceOrientationLandscapeOmg</string>
         </array>
     </gap:config-file>
-    <feature name="Sms">
-        <param name="ios-package" value="Sms" />
-    </feature>
-    <feature name="Console">
-        <param name="ios-package" value="CDVLogger" />
-    </feature>
-    <feature name="Device">
-        <param name="ios-package" value="CDVDevice" />
-    </feature>
-    <preference name="AndroidPersistentFileLocation" value="Internal" />
-    <feature name="File">
-        <param name="ios-package" value="CDVFile" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Cache">
-        <param name="ios-package" value="Cache" />
-    </feature>
 </widget>
