@@ -31,6 +31,56 @@
                         {
                             "xml": "<feature name=\"Cache\"><param name=\"ios-package\" value=\"Cache\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"ios-package\" value=\"FacebookConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<plugin name=\"FacebookConnectPlugin\" value=\"FacebookConnectPlugin\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://m.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://graph.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://api.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "FacebookAppID": [
+                        {
+                            "xml": "<string>$APP_ID</string>",
+                            "count": 1
+                        }
+                    ],
+                    "FacebookDisplayName": [
+                        {
+                            "xml": "<string>$APP_NAME</string>",
+                            "count": 1
+                        }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb$APP_ID</string></array></dict></array>",
+                            "count": 1
                         }
                     ]
                 }
@@ -54,6 +104,9 @@
             "PACKAGE_NAME": "com.meetup"
         },
         "org.apache.cordova.plugin.cache": {
+            "PACKAGE_NAME": "com.meetup"
+        },
+        "phonegap-facebook-plugin": {
             "PACKAGE_NAME": "com.meetup"
         }
     },
@@ -265,6 +318,14 @@
             "clobbers": [
                 "cache"
             ]
+        },
+        {
+            "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
+            "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
+            "pluginId": "phonegap-facebook-plugin",
+            "clobbers": [
+                "facebookConnectPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -273,6 +334,7 @@
         "cordova-plugin-device": "1.1.0",
         "cordova-plugin-file": "3.0.0",
         "cordova-plugin-whitelist": "1.2.0",
-        "org.apache.cordova.plugin.cache": "1.0.5"
+        "org.apache.cordova.plugin.cache": "1.0.5",
+        "phonegap-facebook-plugin": "0.12.0"
     }
 }

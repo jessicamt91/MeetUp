@@ -24,6 +24,9 @@
         },
         "org.apache.cordova.plugin.cache": {
             "PACKAGE_NAME": "com.meetup"
+        },
+        "phonegap-facebook-plugin": {
+            "PACKAGE_NAME": "com.meetup"
         }
     },
     "dependent_plugins": {}

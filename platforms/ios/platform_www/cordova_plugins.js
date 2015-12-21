@@ -206,6 +206,14 @@ module.exports = [
         "clobbers": [
             "cache"
         ]
+    },
+    {
+        "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
+        "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
+        "pluginId": "phonegap-facebook-plugin",
+        "clobbers": [
+            "facebookConnectPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -216,7 +224,8 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.0",
     "cordova-plugin-file": "3.0.0",
     "cordova-plugin-whitelist": "1.2.0",
-    "org.apache.cordova.plugin.cache": "1.0.5"
+    "org.apache.cordova.plugin.cache": "1.0.5",
+    "phonegap-facebook-plugin": "0.12.0"
 }
 // BOTTOM OF METADATA
 });
