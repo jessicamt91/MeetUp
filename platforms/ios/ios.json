@@ -67,31 +67,19 @@
                 "parents": {
                     "FacebookAppID": [
                         {
-<<<<<<< HEAD
                             "xml": "<string>1698519117051449</string>",
-=======
-                            "xml": "<string>$APP_ID</string>",
->>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
                             "count": 1
                         }
                     ],
                     "FacebookDisplayName": [
                         {
-<<<<<<< HEAD
                             "xml": "<string>MeetUp</string>",
-=======
-                            "xml": "<string>$APP_NAME</string>",
->>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
                             "count": 1
                         }
                     ],
                     "CFBundleURLTypes": [
                         {
-<<<<<<< HEAD
                             "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb1698519117051449</string></array></dict></array>",
-=======
-                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb$APP_ID</string></array></dict></array>",
->>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
                             "count": 1
                         }
                     ]
@@ -119,11 +107,8 @@
             "PACKAGE_NAME": "com.meetup"
         },
         "phonegap-facebook-plugin": {
-<<<<<<< HEAD
             "APP_ID": "1698519117051449",
             "APP_NAME": "MeetUp",
-=======
->>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
             "PACKAGE_NAME": "com.meetup"
         }
     },
