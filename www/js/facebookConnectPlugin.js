@@ -162,7 +162,11 @@
         if (!window.FB) {
             console.log("launching FB SDK");
             var e = document.createElement('script');
+<<<<<<< HEAD
             e.src = document.location.protocol + 'http://connect.facebook.net/en_US/sdk.js';
+=======
+            e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
+>>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
             e.async = true;
             document.getElementById('fb-root').appendChild(e);
             if (!window.FB) {
@@ -174,11 +178,15 @@
         }
     }());
 
+<<<<<<< HEAD
     var module={};
+=======
+>>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
     module.exports = facebookConnectPlugin;
 
 // } else {
 
+<<<<<<< HEAD
     // var exec = require("cordova/exec");
 
     // var facebookConnectPlugin = {
@@ -229,3 +237,54 @@
     // var module={};
     // module.exports = facebookConnectPlugin;
 // }
+=======
+//     var exec = require("cordova/exec");
+
+//     var facebookConnectPlugin = {
+
+//         getLoginStatus: function (s, f) {
+//             exec(s, f, "FacebookConnectPlugin", "getLoginStatus", []);
+//         },
+
+//         showDialog: function (options, s, f) {
+//             exec(s, f, "FacebookConnectPlugin", "showDialog", [options]);
+//         },
+
+//         login: function (permissions, s, f) {
+//             exec(s, f, "FacebookConnectPlugin", "login", permissions);
+//         },
+
+//         logEvent: function(name, params, valueToSum, s, f) {
+//             // Prevent NSNulls getting into iOS, messes up our [command.argument count]
+//             if (!params && !valueToSum) {
+//                 exec(s, f, "FacebookConnectPlugin", "logEvent", [name]);
+//             } else if (params && !valueToSum) {
+//                 exec(s, f, "FacebookConnectPlugin", "logEvent", [name, params]);
+//             } else if (params && valueToSum) {
+//                 exec(s, f, "FacebookConnectPlugin", "logEvent", [name, params, valueToSum]);
+//             } else {
+//                 f("Invalid arguments");
+//             }
+//         },
+
+//         logPurchase: function(value, currency, s, f) {
+//             exec(s, f, "FacebookConnectPlugin", "logPurchase", [value, currency]);
+//         },
+
+//         getAccessToken: function(s, f) {
+//             exec(s, f, "FacebookConnectPlugin", "getAccessToken", []);
+//         },
+
+//         logout: function (s, f) {
+//             exec(s, f, "FacebookConnectPlugin", "logout", []);
+//         },
+
+//         api: function (graphPath, permissions, s, f) {
+//             if (!permissions) { permissions = []; }
+//             exec(s, f, "FacebookConnectPlugin", "graphApi", [graphPath, permissions]);
+//         }
+//     };
+
+//     module.exports = facebookConnectPlugin;
+// }
+>>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db

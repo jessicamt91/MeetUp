@@ -26,8 +26,11 @@
             "PACKAGE_NAME": "com.meetup"
         },
         "phonegap-facebook-plugin": {
+<<<<<<< HEAD
             "APP_ID": "1698519117051449",
             "APP_NAME": "MeetUp",
+=======
+>>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
             "PACKAGE_NAME": "com.meetup"
         }
     },

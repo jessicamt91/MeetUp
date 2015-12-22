@@ -2,6 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
+<<<<<<< HEAD
+=======
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>m.facebook.com</key>
+        <dict/>
+        <key>graph.facebook.com</key>
+        <dict/>
+        <key>api.facebook.com</key>
+        <dict/>
+        <key>fbcdn.net</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+        </dict>
+        <key>akamaihd.net</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+        </dict>
+      </dict>
+    </dict>
+>>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
     <key>CFBundleDevelopmentRegion</key>
     <string>English</string>
     <key>CFBundleDisplayName</key>
@@ -224,7 +251,23 @@
         <string>{768, 1024}</string>
       </dict>
     </array>
+<<<<<<< HEAD
     <key>UIRequiresFullScreen</key>
     <true/>
+=======
+    <key>FacebookAppID</key>
+    <string>$APP_ID</string>
+    <key>FacebookDisplayName</key>
+    <string>$APP_NAME</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb$APP_ID</string>
+        </array>
+      </dict>
+    </array>
+>>>>>>> edcb75e5c9f6f404cd13288f33e1ac73d4c307db
   </dict>
 </plist>
