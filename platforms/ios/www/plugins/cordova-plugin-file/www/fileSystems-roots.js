@@ -1,4 +1,4 @@
-/*
+cordova.define("cordova-plugin-file.fileSystems-roots", function(require, exports, module) { /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -42,3 +42,5 @@ require('./fileSystems').getFs = function(name, callback) {
     }
 };
 
+
+});

@@ -24,6 +24,11 @@
         },
         "org.apache.cordova.plugin.cache": {
             "PACKAGE_NAME": "com.test"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "1698519117051449",
+            "APP_NAME": "MeetUp",
+            "PACKAGE_NAME": "com.test"
         }
     },
     "dependent_plugins": {}

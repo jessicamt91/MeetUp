@@ -38,10 +38,6 @@
   <gap:plugin name="org.apache.cordova.vibration"/>
   <gap:plugin name="com.cordova.plugins.sms" version="0.1.1" />
   <gap:plugin name="org.apache.cordova.plugin.cache"/>
-  <gap:plugin name="com.phonegap.plugins.facebookconnect" version="2.5">
-    <param name="APP_ID" value="1698519117051449" />
-    <param name="APP_NAME" value="MeetUp" />
-  </gap:plugin>
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>

@@ -41,8 +41,9 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    text-transform:none;
     width:100%;
+    overflow:hidden;
 }
 
 .header{
@@ -168,9 +169,14 @@ h4 {
   font-weight: 300;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
-  width: 100%;
+  width: 85%;
 }
 
 #pac-input:focus {
   border-color: #4d90fe;
+}
+
+#row-detail {
+    background-color:#F0F8FF;
+    font-family: monospace;
 }

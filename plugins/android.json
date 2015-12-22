@@ -8,22 +8,27 @@
     },
     "installed_plugins": {
         "com.cordova.plugins.sms": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "org.apache.cordova.plugin.cache": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "1698519117051449",
+            "APP_NAME": "MeetUp",
+            "PACKAGE_NAME": "com.meetup"
         }
     },
     "dependent_plugins": {}

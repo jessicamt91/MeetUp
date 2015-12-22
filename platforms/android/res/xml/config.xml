@@ -1,6 +1,32 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.test" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.meetup" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
+    <feature name="Sms">
+        <param name="android-package" value="com.cordova.plugins.sms.Sms" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Cache">
+        <param name="android-package" value="org.apache.cordova.plugin.cache.Cache" />
+    </feature>
+    <feature name="FacebookConnectPlugin">
+        <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
+    </feature>
+    <access origin="https://m.facebook.com" />
+    <access origin="https://graph.facebook.com" />
+    <access origin="https://api.facebook.com" />
+    <access origin="https://*.fbcdn.net" />
+    <access origin="https://*.akamaihd.net" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
     <allow-intent href="market:*" />
     <name>MeetP</name>
     <description>MeetP Where People Meets</description>
@@ -41,10 +67,6 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="com.cordova.plugins.sms" version="0.1.1" />
     <gap:plugin name="org.apache.cordova.plugin.cache" />
-    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="2.5">
-        <param name="APP_ID" value="1698519117051449" />
-        <param name="APP_NAME" value="MeetUp" />
-    </gap:plugin>
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
@@ -83,22 +105,4 @@
             <string>UIInterfaceOrientationLandscapeOmg</string>
         </array>
     </gap:config-file>
-    <feature name="Sms">
-        <param name="android-package" value="com.cordova.plugins.sms.Sms" />
-    </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
-    <preference name="AndroidPersistentFileLocation" value="Internal" />
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Cache">
-        <param name="android-package" value="org.apache.cordova.plugin.cache.Cache" />
-    </feature>
 </widget>

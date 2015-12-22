@@ -66,33 +66,34 @@ window.fbAsyncInit = function() {
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
+  console.log(window.location);
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js";
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1698519117051449";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk')); 
 
 
 // This is called with the results from FB.getLoginStatus().
-function statusChangeCallback(response) {
-  if (response.status === 'connected') {
-      var userID = FB.getUserID(); //PRIMARY KEY TO BE SAVED IN MEETUP DB
-      console.log('User ID :: ' + userID);
-      makeApiCall();
-  } else if (response.status === 'not_authorized') {
-    // The person is logged into Facebook, but not your app.
-    document.getElementById('status').innerHTML = 'Please log ' +
-      'into this app.';
-  } else {
-    // The person is not logged into Facebook, so we're not sure if
-    // they are logged into this app or not.
-    document.getElementById('status').innerHTML = 'Please log ' +
-      'into Facebook.';
-  }
-};
+// function statusChangeCallback(response) {
+//   if (response.status === 'connected') {
+//       var userID = FB.getUserID(); //PRIMARY KEY TO BE SAVED IN MEETUP DB
+//       console.log('User ID :: ' + userID);
+//       makeApiCall();
+//   } else if (response.status === 'not_authorized') {
+//     // The person is logged into Facebook, but not your app.
+//     document.getElementById('status').innerHTML = 'Please log ' +
+//       'into this app.';
+//   } else {
+//     // The person is not logged into Facebook, so we're not sure if
+//     // they are logged into this app or not.
+//     document.getElementById('status').innerHTML = 'Please log ' +
+//       'into Facebook.';
+//   }
+// };
 
-function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+// function checkLoginState() {
+//   FB.getLoginStatus(function(response) {
+//     statusChangeCallback(response);
+//   });
+// }
 

@@ -41,27 +41,30 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="row text-center">
-                        <div class="error" style="display:none"></div>
-                        <div class="col-xs-6">
-                            <div class="input-group input-group-md">
-                                <input type="text" class="form-control" id="signup-username" placeholder="Username" />
-                            </div>
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control" id="signup-username" placeholder="Username" />
                         </div>
-                        <div class="col-xs-6">
-                            <div class="input-group input-group-md">
-                                <input type="password" class="form-control" id="signup-password" placeholder="Password" />
-                            </div>
+                        <div class="col-xs-4">
+                            <input type="password" class="form-control" id="signup-password" placeholder="Password" />
                         </div>
-                    </div>
-                    <div class="row text-center" style="padding-top:10px">
-                        <div class="col-xs-6">
-                            <div class="input-group input-group-md">
-                                <input type="text" class="form-control" id="signup-phonenumber" placeholder="Phone Number" />
-                            </div>
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control" id="signup-phonenumber" placeholder="Phone Number" />
                         </div>
                     </div>
                     <div class="row text-center">
-                        <button class="signup btn btn-warning top-margin-1">Sign Up</button>
+                        <div class="col-xs-12">
+                            <button class="signup btn btn-warning top-margin-1">Sign Up with Email</button>
+                        </div>
+                    </div>
+                    <div class="row text-center" style="padding-top:10px">
+                        <div class="col-xs-12">
+                                <input type="text" class="form-control" id="signup-fb-phonenumber" placeholder="Phone Number" />
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-xs-12">
+                            <button class="signup-fb btn btn-warning top-margin-1">Sign Up with Facebook</button>
+                        </div>
                     </div>
                 </div>
             </div>  
@@ -72,11 +75,12 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/parse-1.1.2.min.js"></script>
         <script type="text/javascript" src="js/angular.min.js"></script>
-         <script type="text/javascript" src="js/cordova.js"></script> 
+         <script type="text/javascript" src="cordova.js"></script> 
 
         <!-- meetup scripts --> 
         <script type="text/javascript" src="js/index.js"></script>    <!-- Google oAuth 2.0 -->
         <script src="https://apis.google.com/js/client.js"></script>
         <script type="text/javascript" src="js/oAuth2.js"></script>
+         <script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-/*
+cordova.define("cordova-plugin-file.browserFileProxy", function(require, exports, module) { /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -962,3 +962,5 @@ var LocalFileSystem = require('./LocalFileSystem'),
 })(module.exports, window);
 
 require("cordova/exec/proxy").add("File", module.exports);
+
+});

@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.test" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.meetup" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <feature name="FacebookConnectPlugin">
+        <param name="browser-package" value="FacebookConnectPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <plugin name="FacebookConnectPlugin" value="FacebookConnectPlugin" />
+    <access origin="https://m.facebook.com" />
+    <access origin="https://graph.facebook.com" />
+    <access origin="https://api.facebook.com" />
+    <access origin="https://*.fbcdn.net" />
+    <access origin="https://*.akamaihd.net" />
     <name>MeetP</name>
     <description>MeetP Where People Meets</description>
     <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
@@ -39,10 +53,6 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="com.cordova.plugins.sms" version="0.1.1" />
     <gap:plugin name="org.apache.cordova.plugin.cache" />
-    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="2.5">
-        <param name="APP_ID" value="1698519117051449" />
-        <param name="APP_NAME" value="MeetUp" />
-    </gap:plugin>
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
@@ -81,8 +91,4 @@
             <string>UIInterfaceOrientationLandscapeOmg</string>
         </array>
     </gap:config-file>
-    <feature name="Device">
-        <param name="browser-package" value="Device" />
-    </feature>
-    <preference name="AndroidPersistentFileLocation" value="Internal" />
 </widget>

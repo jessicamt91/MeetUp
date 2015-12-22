@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-           <script src="http://192.168.0.106:8080/target/target-script-min.js#anonymous"></script>
+       <!--    <script src="http://192.168.0.106:8080/target/target-script-min.js#anonymous"></script> -->
     </head>
     <body>
         <div class="header">
@@ -52,9 +52,11 @@
                 <button type="button" class="btn btn-info login-btn" id="authorize-button-email">Sign in with Email</button>
                
                 <button type="button" class="btn btn-info login-btn" id="authorize-button-google">Sign in with Google</button>
-                <div id="btn1">
-                    <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" onlogin="checkLoginState()">Sign in with Facebook</div>
-                </div>
+
+
+
+                <div id="fb-root"></div>
+                <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
             </div>
 
         </div>
@@ -64,12 +66,12 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/parse-1.1.2.min.js"></script>
         <script type="text/javascript" src="js/angular.min.js"></script>
-        <!-- <script type="text/javascript" src="js/uber.js"></script> -->
-        <!-- <script type="text/javascript" src="js/cordova.js"></script> -->
+        <script type="text/javascript" src="js/cordova.js"></script>
 
         <!-- meetup scripts --> 
         <script type="text/javascript" src="js/index.js"></script>    <!-- Google oAuth 2.0 -->
         <script src="https://apis.google.com/js/client.js"></script>
-        <script type="text/javascript" src="js/oAuth2.js"></script>
+        <!-- <script type="text/javascript" src="js/oAuth2.js"></script> -->
+        <script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
     </body>
 </html>

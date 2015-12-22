@@ -146,8 +146,11 @@ h4 {
 }
 
 .signup-btn,
-.login-btn {
-    width: 50%;
+.login-btn,
+.login-fb,
+.signup-fb,
+.signup {
+    width: 80%;
     margin-bottom: 10px;
 }
 

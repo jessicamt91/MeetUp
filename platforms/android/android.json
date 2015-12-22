@@ -27,6 +27,30 @@
                         {
                             "xml": "<feature name=\"Cache\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.cache.Cache\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"android-package\" value=\"org.apache.cordova.facebook.ConnectPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://m.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://graph.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://api.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -52,6 +76,16 @@
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
+                    ],
+                    "application": [
+                        {
+                            "xml": "<meta-data android:name=\"com.facebook.sdk.ApplicationId\" android:value=\"@string/fb_app_id\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:label=\"@string/fb_app_name\" android:name=\"com.facebook.LoginActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\" />",
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -64,27 +98,46 @@
                         }
                     ]
                 }
+            },
+            "res/values/facebookconnect.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"fb_app_id\">1698519117051449</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string name=\"fb_app_name\">MeetUp</string>",
+                            "count": 1
+                        }
+                    ]
+                }
             }
         }
     },
     "installed_plugins": {
         "com.cordova.plugins.sms": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
         },
         "org.apache.cordova.plugin.cache": {
-            "PACKAGE_NAME": "com.test"
+            "PACKAGE_NAME": "com.meetup"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "1698519117051449",
+            "APP_NAME": "MeetUp",
+            "PACKAGE_NAME": "com.meetup"
         }
     },
     "dependent_plugins": {},
@@ -285,6 +338,14 @@
             "clobbers": [
                 "cache"
             ]
+        },
+        {
+            "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
+            "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
+            "pluginId": "phonegap-facebook-plugin",
+            "clobbers": [
+                "facebookConnectPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -293,6 +354,7 @@
         "cordova-plugin-device": "1.1.0",
         "cordova-plugin-file": "3.0.0",
         "cordova-plugin-whitelist": "1.2.0",
-        "org.apache.cordova.plugin.cache": "1.0.5"
+        "org.apache.cordova.plugin.cache": "1.0.5",
+        "phonegap-facebook-plugin": "0.12.0"
     }
 }

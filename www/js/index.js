@@ -24,15 +24,15 @@ $('.signup').on('click', function(e) {
 
     user.signUp(null, {
         success: function (user){
-           console.log('success');
-          window.location.href = 'meetup.html';
-        },
-        error:function (user, error) {
-            console.log("Error: " + error.code + " " + error.message);
-            window.alert(error.code + " " + error.message);
-           window.location.href = 'loginform.html';
-        }
-    })
+         console.log('success');
+         window.location.href = 'meetup.html';
+     },
+     error:function (user, error) {
+        console.log("Error: " + error.code + " " + error.message);
+        window.alert(error.code + " " + error.message);
+        window.location.href = 'loginform.html';
+    }
+})
     $(".signup-form button").attr("disabled", "disabled");
 
     return false;
@@ -41,9 +41,9 @@ $('.signup').on('click', function(e) {
 
 /* SIGN IN with email */
 $('#authorize-button-email').on('click',function(){
- Parse.initialize("Cpo57dfkHJfnHUoO4MVztot7lwUTTTl7JS8prOi7", "iWeYqkPudnAh44JRcP04vwl5fvK8OBxcG0YRcttm");
- var currentUser = Parse.User.current();
-if (currentUser) {
+   Parse.initialize("Cpo57dfkHJfnHUoO4MVztot7lwUTTTl7JS8prOi7", "iWeYqkPudnAh44JRcP04vwl5fvK8OBxcG0YRcttm");
+   var currentUser = Parse.User.current();
+   if (currentUser) {
     // do stuff with the user
     console.log('current user: '+ currentUser);
     window.location.href = "meetup.html";
@@ -57,15 +57,109 @@ if (currentUser) {
           //console.log('login successful');
           //console.log(JSON.stringify(user));
           window.open ('meetup.html','_self',false);
-        },
-        error: function(user, error){
+      },
+      error: function(user, error){
           console.log(JSON.stringify(user));
           console.log(error);
-          window.open ('login.html','_self',false);
-        }
-    });
-  }
+          window.open ('loginform.html','_self',false);
+      }
+  });
+}
 });
+
+//Sign Up FB
+
+$('.signup-fb').on('click', function() {
+    facebookConnectPlugin.login(["public_profile"],
+        function (response) { 
+            var fbUserID = response.authResponse.userID;
+            var phoneNumber = $("#signup-fb-phonenumber").val();
+            if(phoneNumber == ''){
+                window.alert('Please fill in the Phone Number');
+            }else{
+                Parse.initialize("Cpo57dfkHJfnHUoO4MVztot7lwUTTTl7JS8prOi7", "iWeYqkPudnAh44JRcP04vwl5fvK8OBxcG0YRcttm");
+
+                var username = fbUserID;
+
+                var user = new Parse.User();
+                user.set("username",username);
+                user.set("password",'facebookLogin');
+                user.set("phoneNumber",phoneNumber);
+
+                user.signUp(null, {
+                    success: function (user){
+                      console.log('success');
+                      window.location.href = 'meetup.html';
+                    },
+                    error:function (user, error) {
+                        console.log("Error: " + error.code + " " + error.message);
+                        window.alert(error.code + " " + error.message);
+                        window.location.href = 'loginform.html';
+                    }
+                })
+            }
+        
+        return false;
+    },
+    function (error) { alert("Error Code : " + error.code + " Desc: " + error.message); 
+}
+);
+})
+//Sign in FB
+$('.login-fb').on('click', function() {
+    facebookConnectPlugin.login(["public_profile"],
+        function (response) { 
+            var fbUserID = response.authResponse.userID;
+
+            Parse.initialize("Cpo57dfkHJfnHUoO4MVztot7lwUTTTl7JS8prOi7", "iWeYqkPudnAh44JRcP04vwl5fvK8OBxcG0YRcttm");
+
+        // var facebookAuthData = response.authResponse;
+        // {
+
+        // "id": response.id+"",
+        // "access_token": response["accessToken"],
+      //  "expiration_date": response["expirationDate"].slice(0, -1).replace("+", ".")+"Z"
+        // }
+
+        // Parse.FacebookUtils.logIn(facebookAuthData, {
+
+        // success: function(_user) {
+        //     console.log("User is logged into Parse");
+        // },
+
+        // error: function(error1, error2){
+        //     console.log("Unable to create/login to as Facebook user");
+        //     console.log("  ERROR1 = "+JSON.stringify(error1));
+        //     console.log("  ERROR2 = "+JSON.stringify(error2));
+        // }
+        // });
+
+
+        //var username = fbUserID;
+        // var password = $("#signup-password").val();
+        // var phoneNumber = $("#signup-phonenumber").val();
+
+        
+        Parse.initialize("Cpo57dfkHJfnHUoO4MVztot7lwUTTTl7JS8prOi7", "iWeYqkPudnAh44JRcP04vwl5fvK8OBxcG0YRcttm");
+        
+        // show the signup or login page
+        var username = fbUserID;
+        var password = 'facebookLogin';
+        Parse.User.logIn(username, password, {
+            success: function(user){
+              window.open ('meetup.html','_self',false);
+          },
+          error: function(user, error){
+              console.log(JSON.stringify(user));
+              console.log(error);
+              window.open ('loginform.html','_self',false);
+          }
+      });
+    },
+    function (error) { alert("" + error) 
+}
+);
+})
 
 /**---------------------------
 MEETUP.HTML 
@@ -73,7 +167,7 @@ MEETUP.HTML
 /** meetup.html -- GET ALL USERS IN PARSE **/
 function checklistFriends(){
     $('#invite').prop('disabled', true);
-     Parse.initialize("Cpo57dfkHJfnHUoO4MVztot7lwUTTTl7JS8prOi7", "iWeYqkPudnAh44JRcP04vwl5fvK8OBxcG0YRcttm");
+    Parse.initialize("Cpo57dfkHJfnHUoO4MVztot7lwUTTTl7JS8prOi7", "iWeYqkPudnAh44JRcP04vwl5fvK8OBxcG0YRcttm");
 
     var User = Parse.Object.extend("User");
     var query = new Parse.Query(User);
@@ -91,7 +185,7 @@ function checklistFriends(){
         },
         error: function(object, error) {
             console.log(error);
-           
+
         }
     })
 }
@@ -134,22 +228,22 @@ $('#add').on('click', function(){
                 console.log("Inserted");
                 window.alert("A meetup at " + address +" is successfully created");
                // window.location.href = "listOfMeetups.html";
-            },
-            error: function(meetingList, error){
-                console.log(error.code + "," + error.message);
-               
-            } 
-        });
+           },
+           error: function(meetingList, error){
+            console.log(error.code + "," + error.message);
+
+        } 
+    });
     }
-   
+
 });
 
 /**---------------------------
  LIST OF MEETUPS.HTML 
----------------------------**/
+ ---------------------------**/
 
-/** listOfMeetups.html -- RECEIVE ALL MEETUPS **/
-function retrieveListOfMeetups(){
+ /** listOfMeetups.html -- RECEIVE ALL MEETUPS **/
+ function retrieveListOfMeetups(){
     Parse.initialize("Cpo57dfkHJfnHUoO4MVztot7lwUTTTl7JS8prOi7", "iWeYqkPudnAh44JRcP04vwl5fvK8OBxcG0YRcttm");
     var Meetings = Parse.Object.extend("Meetings");
     var query = new Parse.Query(Meetings);
@@ -174,10 +268,10 @@ function retrieveListOfMeetups(){
                         response.forEach(function(value, key) {
                             var userId = value.get("userId");
                             var smsLink = "<a href='sms.html?userId="+ userId + "'><button class='btn btn-warning top-margin-1'> Send SMS </button></a>"; 
-                             console.log(smsLink);
-                             entry = entry + "<div id='row-detail'>" + value.get("userId") + " is currently located at Latitude = " + value.get("latitude")+" & Longitude = "+value.get("longitude") + smsLink + "</div>";
-                             locations[maps] = [value.get("userId"), value.get("latitude"), value.get("longitude"),value.get("maps")];
-                             maps++;
+                            console.log(smsLink);
+                            entry = entry + "<div id='row-detail'>" + value.get("userId") + " is currently located at Latitude = " + value.get("latitude")+" & Longitude = "+value.get("longitude") + smsLink + "</div>";
+                            locations[maps] = [value.get("userId"), value.get("latitude"), value.get("longitude"),value.get("maps")];
+                            maps++;
                         });
                         entry = entry + "</div> ";
                         $(entry).appendTo('#listOfMeetups');
@@ -185,11 +279,11 @@ function retrieveListOfMeetups(){
                         var entry1 = "<div class='col-xs-12' id='content'> <div id='map"+j +"' style='width : 500px; height: 200px' class='hidden'></div></div>"
                         $(entry1).appendTo('#maps');
 
-                         var map = new google.maps.Map(document.getElementById('map'+j), {
+                        var map = new google.maps.Map(document.getElementById('map'+j), {
                           zoom: 10,
                           center: new google.maps.LatLng(1.32599, 103.82361),
                           mapTypeId: google.maps.MapTypeId.ROADMAP
-                        });
+                      });
 
                         var infowindow = new google.maps.InfoWindow();
 
@@ -199,37 +293,37 @@ function retrieveListOfMeetups(){
                           marker = new google.maps.Marker({
                             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                             map: map
-                          });
+                        });
 
                           google.maps.event.addListener(marker, 'click', (function(marker, i) {
                             return function() {
                               infowindow.setContent(locations[i][0]);
                               infowindow.open(map, marker);
-                            }
-                          })(marker, i));
-                        }
+                          }
+                      })(marker, i));
+                      }
 
-                       j++;
-                    },
-                    error: function(object, error) {
-                        console.log(error.code + " , "+  error.message);
-                       
-                    }
-                })
+                      j++;
+                  },
+                  error: function(object, error) {
+                    console.log(error.code + " , "+  error.message);
+
+                }
             })
+})
 
-        },
-        error: function(object, error) {
-            console.log(error);
-           
-        }
-    })
+},
+error: function(object, error) {
+    console.log(error);
+
+}
+})
 }
 
 /** listOfMeetups.html -- SHOW GOOGLE MAPS ON THE SELECTED MEETUP **/
 function showMaps(count, totalCount){
     $('#map'+count).removeClass("hidden");
-     $('#meetup'+count).attr('aria-expanded', true);
+    $('#meetup'+count).attr('aria-expanded', true);
     var i=0;
     while(i < totalCount){
         if(i != count){
@@ -266,7 +360,7 @@ function getPhoneNumberByUserId(userId){
         },
         error: function(object, error){
             console.log(error.code + " : " + error.message);
-           
+
         }
     })
 }
@@ -298,7 +392,7 @@ function getParameterByName(name){
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
